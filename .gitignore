@@ -1,0 +1,8 @@
+*~
+blib
+_build
+*.gz
+META.yml
+Build
+Makefile.PL
+*.bak

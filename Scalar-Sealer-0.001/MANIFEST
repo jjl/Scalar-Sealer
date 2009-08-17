@@ -1,0 +1,11 @@
+Build.PL
+Changes
+lib/Scalar/Sealed.pm
+lib/Scalar/Sealer.pm
+lib/Scalar/Unsealer.pm
+MANIFEST			This list of files
+README
+t/02-basic.pm
+t/03-overload.pm
+Makefile.PL
+META.yml
