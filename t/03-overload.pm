@@ -155,5 +155,9 @@ is($@,'','bool');
 eval {"$s"};
 is($@,'','""');
 
-#Unseals correctly
-isnt(unseal($s,$u),$foo);
+TODO: {
+    local $TODO = "Known bug that after interacting with the seal, and it dieing, you can't then use it. Shouldn't be a problem in real-world scenarios.";
+    #Unseals correctly
+    is(unseal($s,$u),$foo);
+
+}
