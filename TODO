@@ -1,0 +1,3 @@
+Known bugs:
+- Stringifying won't die. How else can we make an inside-out object?
+- After tampering with an operator and it dying, it won't unseal. Why?
