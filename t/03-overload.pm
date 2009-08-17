@@ -136,8 +136,6 @@ eval {*{$s}};
 isnt($@,'','*{}');
 
 #Conversion
-eval {"" . $s};
-isnt($@,'','""');
 eval {0+$s};
 isnt($@,'','0+');
 
@@ -154,6 +152,8 @@ is($@,'','int');
 #Conversion to bool,string,number
 eval {!! $s};
 is($@,'','bool');
+eval {"$s"};
+is($@,'','""');
 
 #Unseals correctly
 isnt(unseal($s,$u),$foo);
