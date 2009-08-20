@@ -1,9 +1,9 @@
 use Test::More tests => 63;
 
 use Scalar::Sealer qw(seal unseal);
-
+no warnings 'void';
 my $foo = 'foo';
-my ($s,$u) = seal($s);
+my ($s,$u) = seal($foo);
 
 #Arithmetic
 eval {$s + 1};
@@ -155,9 +155,4 @@ is($@,'','bool');
 eval {"$s"};
 is($@,'','""');
 
-TODO: {
-    local $TODO = "Known bug that after interacting with the seal, and it dieing, you can't then use it. Shouldn't be a problem in real-world scenarios.";
-    #Unseals correctly
-    is(unseal($s,$u),$foo);
-
-}
+is(unseal($s,$u),$foo);
